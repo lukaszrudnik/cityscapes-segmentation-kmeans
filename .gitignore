@@ -1,10 +1,6 @@
 # data - too large for git
 data/*
-!data/leftImg8bit/
-!data/leftImg8bit/.gitkeep
-!data/gtFine/
-!data/gtFine/.gitkeep
-
+!data/.gitkeep
 
 # outputs
 labels/*
