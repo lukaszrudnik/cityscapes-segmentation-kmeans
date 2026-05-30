@@ -1,0 +1,28 @@
+# data - too large for git
+data/*
+!data/leftImg8bit/
+!data/leftImg8bit/.gitkeep
+!data/gtFine/
+!data/gtFine/.gitkeep
+
+
+# outputs
+labels/*
+!labels/.gitkeep
+
+results/*
+!results/.gitkeep
+
+
+# python
+__pycache__/
+*.pyc
+*.pyo
+.env
+venv/
+.ipynb_checkpoints/
+
+
+# system
+.DS_Store
+Thumbs.db

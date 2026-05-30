@@ -1,0 +1,5 @@
+numpy
+pillow
+scikit-learn
+matplotlib
+jupyter
