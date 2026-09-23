@@ -274,7 +274,7 @@ def render_demo_figure(d, segs, ious, ks, lams, out_path):
 
 # ---------------------------------------------------------------- gallery HTML
 _GALLERY_TEMPLATE = """<!doctype html>
-<html lang="pl"><head><meta charset="utf-8">
+<html lang="en"><head><meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>k-means demo - __CITY__</title>
 <style>
