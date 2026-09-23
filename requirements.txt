@@ -3,3 +3,4 @@ pillow
 scikit-learn
 matplotlib
 jupyter
+scikit-image
