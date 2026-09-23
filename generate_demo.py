@@ -1,18 +1,3 @@
-"""
-generate_demo.py - standalone script that generates the browsing demo.
-
-Run:  python generate_demo.py
-
-Produces, for the city/params in CONFIG below:
-  results/demo/<frame>.png   one figure per image (rows = k, cols = original | GT | RGB | position(lambda))
-  results/demo/index.html    gallery to browse and pick frames (search + sort by mIoU)
-  results/demo/legend.png    plain ground-truth class legend
-  results/demo/iou_results.csv   per-image / per-setting mIoU
-  results/metrics_grid.csv       aggregate mIoU (color-only baseline + color+pos per k, lambda)
-
-This file is fully self-contained (no shared module).
-"""
-
 import os
 import csv
 import glob
@@ -182,7 +167,7 @@ def colorize_classes(class_map):
 
 
 def colorize_hybrid(cluster_map, gt_map):
-    """Colour each cluster by its dominant GT class, varying the shade per cluster."""
+    """Color each cluster by its dominant GT class, varying the shade per cluster."""
     from collections import defaultdict
     out = np.zeros(cluster_map.shape + (3,), dtype=np.uint8)
     by_class = defaultdict(list)
@@ -204,7 +189,7 @@ def colorize_hybrid(cluster_map, gt_map):
 
 # ---------------------------------------------------------------- standalone GT legend
 def save_legend(path=None, ncol=2):
-    """Plain ground-truth legend (one flat colour per class, no shading) as a PNG."""
+    """Plain ground-truth legend (one flat color per class, no shading) as a PNG."""
     from matplotlib.patches import Patch
     if path is None:
         path = os.path.join(DEMO_DIR, "legend.png")
@@ -330,7 +315,7 @@ _GALLERY_TEMPLATE = """<!doctype html>
   <div class="legend">__LEGEND__</div>
 </header>
 <div class="grid" id="grid"></div>
-<footer>Each tile: rows = k, cols = original / ground truth / RGB only / position(lambda). Number on a panel = mIoU. Colours follow Cityscapes classes; shades of one colour = different clusters of that class. Click a tile to open it full size.</footer>
+<footer>Each tile: rows = k, cols = original / ground truth / RGB only / position(lambda). Number on a panel = mIoU. Colors follow Cityscapes classes; shades of one color = different clusters of that class. Click a tile to open it full size.</footer>
 <script>
 const DATA = __DATA__;
 const grid = document.getElementById('grid');
