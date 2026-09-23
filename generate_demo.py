@@ -26,8 +26,6 @@ from sklearn.cluster import KMeans, MiniBatchKMeans
 
 import warnings
 warnings.filterwarnings("ignore")
-# from sklearn.exceptions import ConvergenceWarning
-# warnings.filterwarnings("ignore", category=FutureWarning)
 
 # ---------------------------------------------------------------- paths
 DATA_DIR = "data"
