@@ -157,7 +157,7 @@ Run the cells in order. All parameters (city, number of frames, k, λ, resolutio
 python generate_demo.py
 ```
 
-Renders one figure per frame (every k × every λ) into `results/demo/` and builds an interactive HTML gallery of all of them. Parameters are in the `CONFIG` dictionary at the bottom of the script.
+Renders one figure per frame (every k × every λ) into `results/demo/` and builds an interactive HTML gallery of all of them. Parameters are in the `CONFIG` dictionary at the bottom of the script. Like the notebook, a full run over 150 frames runs 3,600 k-means fits and renders 150 figures, so it takes a while. Lower `num_images` for a quick try.
 
 Open the gallery in any browser, no server needed:
 

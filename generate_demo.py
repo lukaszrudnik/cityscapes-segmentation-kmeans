@@ -434,7 +434,7 @@ CONFIG = {
     **DEFAULT_CONFIG,
     "city": "cologne",
     "image_names": [],          # empty -> first num_images frames of the city
-    "num_images": 150,           # bump to 150 to browse the whole city
+    "num_images": 150,           # frames to process (Cologne has 154)
     "resize": (512, 256),       # (384,192) / (256,128) for a faster big run
     "demo_k_values": [8, 12, 16],
     "demo_lambda_values": [0.1, 0.25, 0.5, 0.75, 1.0, 1.5, 2.0],
