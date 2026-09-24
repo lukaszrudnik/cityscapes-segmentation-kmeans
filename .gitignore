@@ -3,9 +3,6 @@ data/*
 !data/.gitkeep
 
 # outputs
-labels/*
-!labels/.gitkeep
-
 results/*
 !results/.gitkeep
 
@@ -16,7 +13,12 @@ __pycache__/
 *.pyo
 .env
 venv/
+.venv/
 .ipynb_checkpoints/
+
+
+# editor
+.vscode/
 
 
 # system
